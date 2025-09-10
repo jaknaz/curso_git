@@ -1,0 +1,46 @@
+# -------------------------------
+# Paso 1: Directorio de trabajo
+# -------------------------------
+# Estás editando tu archivo en tu cuarto
+# (los archivos están modificados, pero Git aún no los sigue)
+vim archivo.txt   # editas archivo.txt
+git status        # Git te dice:
+# On branch main
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#       modified:   archivo.txt
+# (Directorio de trabajo → Tu cuarto con cosas regadas)
+
+# -------------------------------
+# Paso 2: Staging area
+# -------------------------------
+# Decides qué cambios llevar en tu maleta
+git add archivo.txt
+git status
+# Changes to be committed:
+#   (use "git restore --staged <file>..." to unstage)
+#       new file:   archivo.txt
+# (Staging area → Maleta abierta: apartaste la ropa que quieres llevar)
+
+# -------------------------------
+# Paso 3: Commit (repositorio local)
+# -------------------------------
+# Cierras la maleta, guardando los cambios en tu historial local
+git commit -m "Agrego cambios a archivo.txt"
+# [main 1a2b3c4] Agrego cambios a archivo.txt
+# 1 file changed, 3 insertions(+)
+# (Commit → Maleta cerrada, snapshot guardado en TU compu)
+
+# -------------------------------
+# Paso 4: Push (repositorio remoto)
+# -------------------------------
+# Ahora envías la maleta al aeropuerto, disponible en la nube
+git push origin main
+# Enumerando objetos: 3, done.
+# Counting objects: 100% (3/3), done.
+# Compressing objects: 100% (2/2), done.
+# Writing objects: 100% (3/3), 345 bytes | 345.00 KiB/s, done.
+# Total 3 (delta 0), reused 0 (delta 0)
+# To github.com:usuario/repositorio.git
+#    1a2b3c4..5d6e7f8  main -> main
+# (Push → Maleta en avión → nube 🌍)
